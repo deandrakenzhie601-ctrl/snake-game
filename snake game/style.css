@@ -1,0 +1,132 @@
+/* Reset Dasar & Setup Fullscreen */
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Mencegah scroll */
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+ 
+/* Kontainer Utama untuk Tata Letak Horizontal */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box; /* Memastikan padding tidak merusak layout */
+}
+ 
+/* Area Game (Canvas) */
+#gameCanvas {
+    background-color: #000;
+    border: 3px solid #444;
+    border-radius: 8px;
+}
+ 
+/* Panel UI di sebelah kanan */
+.ui-panel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+ 
+#scoreContainer h2 {
+    font-size: 2em;
+    color: #4CAF50;
+    margin: 0;
+}
+#scoreContainer h3 {
+    font-size: 1.2em;
+    color: #f1c40f;
+    margin-top: 5px;
+}
+ 
+#leaderboard h3 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+}
+#leaderboardList {
+    padding-left: 20px;
+    font-size: 1.1em;
+}
+#leaderboardList li {
+    margin-bottom: 5px;
+}
+ 
+/* Styling untuk Popup (Start & Game Over) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+ 
+.popup {
+    background: #333;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #555;
+}
+ 
+.popup h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+ 
+.popup input {
+    font-size: 1.2em;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #777;
+}
+ 
+.popup button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.popup button:hover {
+    background-color: #45a049;
+}
+ 
+/* Utility class untuk menyembunyikan elemen */
+.hidden {
+    display: none;
+}
+ 
+.leaderboard-name {
+    color: #f1c40f; /* Warna kuning untuk "highlight" */
+    font-weight: bold;
+}
+ 
+/* Fitur 2: Warna berbeda untuk skor */
+.leaderboard-score {
+    color: #50e3c2; /* Warna hijau muda/turquoise */
+    font-weight: bold;
+    margin-left: 8px; /* Memberi sedikit jarak dari nama */
+}

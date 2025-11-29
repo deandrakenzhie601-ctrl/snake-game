@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="startScreen" class="overlay">
+        <div class="popup">
+            <h2>Snake Game</h2>
+            <input type="text" id="usernameInput" placeholder="Masukkan Nama Anda">
+            <button id="startButton">Mulai Bermain</button>
+        </div>
+    </div>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        <div class="ui-panel">
+            <div id="scoreContainer">
+                <h2>Skor: <span id="currentScore">0</span></h2>
+                <h3>Skor Tertinggi: <span id="topScore">0</span></h3>
+            </div>
+            <div id="leaderboard">
+                <h3>Leaderboard</h3>
+                <ol id="leaderboardList">
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div id="gameOverScreen" class="overlay hidden">
+        <div class="popup">
+            <h2>Game Over!</h2>
+            <p>Pemain: <span id="finalPlayer"></span></p>
+            <p>Skor Akhir: <span id="finalScore"></span></p>
+            <button id="playAgainButton">Main Lagi</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
